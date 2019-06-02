@@ -1,6 +1,6 @@
 # coin-flip
 
-This program graphs with matplotlib the relationship between the number of coin flips and the difference in percentage of heads and tails. Prints total time elapsed.
+This program graphs with matplotlib the relationship between the number of coin flips and the distance of the percentage of heads from 50%. Prints total time elapsed.
 
 <br>
 
@@ -12,4 +12,4 @@ Created by Michael Dougherty
 
 <br>
 
-Inspired by John Fish :)
+Inspired by John Fish

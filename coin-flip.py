@@ -3,12 +3,12 @@
 # Usage: ./coin-flip.py [flips]
 #
 # This program graphs with matplotlib the relationship between the number
-# of coin flips and the difference in percentage of heads and tails.
+# of coin flips and the distance of the percentage of heads from 50%.
 # Prints total time elapsed.
 #
 # Created by Michael Dougherty
 #
-# Inspired by John Fish :)
+# Inspired by John Fish
 
 from datetime import timedelta as td
 import matplotlib.pyplot as plt
@@ -36,7 +36,7 @@ percentDiff = list()
 # Initialize heads
 heads = 0
 
-# Flip coins and record difference in heads and tails each time
+# Flip coins and record distance of percentage of heads from 50% each time 
 for flip in range(1, flips + 1):
     # "Flip coins"
     if random() >= 0.5:
@@ -53,12 +53,12 @@ for flip in range(1, flips + 1):
 elapsedTime = str(td(seconds=round(time() - startTime, 10)))[5:]
 print(f"{elapsedTime} seconds elapsed")
 
-# Create plot and set minimum x-value
+# Create plot
 plot = plt.plot(nArray, percentDiff)
 
 # Add labels
 plt.xlabel("Number of Flips")
-plt.ylabel("Percentage Difference")
+plt.ylabel("Distance of Percentage of Heads from 50% (%)")
 plt.title("Accuracy of a 50/50 Chance as Number of Trials Increases")
 
 # Show plot
