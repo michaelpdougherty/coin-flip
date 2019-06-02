@@ -16,13 +16,15 @@ from random import random
 from sys import argv
 from time import time
 
-# If argv[1] given, set maximum number of flips to calculate
-if len(argv) > 1 and argv[1].isdigit():
-    flips = int(argv[1])
+# Set default number of flips
+DEFAULT = 10000
 
-# Else, prompt user
+# Get flips
+if len(argv) == 2:
+    flips = int(argv[1]) if argv[1].isdigit() else DEFAULT
 else:
-    flips = int(input("Flips: "))
+    flips = input(f"Flips (default {DEFAULT}): ")
+    flips = int(flips) if flips.isdigit() else DEFAULT
 
 # Record starting time
 startTime = time()
@@ -35,7 +37,7 @@ percentDiff = list()
 heads = 0
 
 # Flip coins and record difference in heads and tails each time
-for flip in range(2, flips + 2):
+for flip in range(1, flips + 1):
     # "Flip coins"
     if random() >= 0.5:
         heads += 1
@@ -51,7 +53,7 @@ for flip in range(2, flips + 2):
 elapsedTime = str(td(seconds=round(time() - startTime, 10)))[5:]
 print(f"{elapsedTime} seconds elapsed")
 
-# Create plot
+# Create plot and set minimum x-value
 plot = plt.plot(nArray, percentDiff)
 
 # Add labels
