@@ -1,5 +1,7 @@
-#  Flips coin flips number of times
-#  and prints percentages of each heads and tails
+#!/usr/bin/env python3.6
+
+# Flips coin flips number of times
+# and prints percentages of each heads and tails
 
 from random import random
 from time import time
