@@ -3,8 +3,7 @@
 # Usage: ./coin-flip.py [flips]
 #
 # This program graphs with matplotlib the relationship between the number
-# of coin flips and the distance of the percentage of heads from 50%.
-# Prints total time elapsed.
+# of coin flips and the distance of the percentage of heads from 50% and prints total time elapsed.
 #
 # Created by Michael Dougherty
 #
