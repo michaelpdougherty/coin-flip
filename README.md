@@ -4,7 +4,7 @@ This program graphs with matplotlib the relationship between the number of coin 
 
 <br>
 
-Usage: ./coin-flip.py [flips]
+Usage: <em>./coin-flip.py [flips]</em>
 
 <br>
 
