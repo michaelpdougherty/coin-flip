@@ -4,7 +4,7 @@ This program graphs from one to a user-inputted number the relationship between 
 
 <br>
 
-Usage: ./coin-flip.py [N]
+Usage: ./coin-flip.py [flips]
 
 <br>
 
