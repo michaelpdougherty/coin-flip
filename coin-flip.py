@@ -1,20 +1,28 @@
 #!/usr/bin/env python3.6
-
-# This program graphs the relationship between the difference in percentages
-# of heads and tails and the number of coin flips as it increases from
-# one to a user-inputted number
+#
+# Usage: ./coin-flip.py [N]
+#
+# This program graphs from one to a user-inputted number the relationship
+# between the number of coin flips and the difference between the percentages
+# of heads and tails. Graphs with matplotlib. Prints total program time.
 #
 # Created by Michael Dougherty
 #
 # Inspired by John Fish :)
 
-from random import random
-from time import time
 from datetime import timedelta as td
 import matplotlib.pyplot as plt
+from random import random
+from sys import argv
+from time import time
 
-# Set maximum number of flips to calculate
-maxFlips = int(input("Max Flips: "))
+# If argv[1] given, set maximum number of flips to calculate
+if len(argv) > 1 and argv[1].isdigit():
+    maxFlips = int(argv[1])
+
+# Else, prompt user
+else:
+    maxFlips = int(input("Flips: "))
 
 # Record starting time
 startTime = time()
